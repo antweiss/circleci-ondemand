@@ -9,7 +9,7 @@ jobs:
           echo "I am trying something new here"
           echo $MONGO_USER > filechick
           cat filechick
-      - run: docker run alpine sh -c "cat /etc/*-release"
+      - run: docker run -v ${CIRCLE_WORKING_DIRECTORY}/filechick:/filechick alpine sh -c "cat /filechick"
           
 
 workflows:
