@@ -8,7 +8,7 @@ jobs:
       - run: |
           echo "I am trying something new here"
                 
-      - run: docker run alpine cat /etc/*-release
+      - run: docker run alpine sh -c "cat /etc/*-release"
           
 
 workflows:
