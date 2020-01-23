@@ -9,9 +9,9 @@ workflows:
   # Name the workflow "welcome"
   welcome:
     jobs:
-      build:
-        type: approval
-        machine: true
-        steps:
-          docker run alpine cat /etc/*-release
+      - build:
+          type: approval
+          machine: true
+          steps:
+            docker run alpine cat /etc/*-release
           
