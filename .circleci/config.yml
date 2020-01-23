@@ -7,7 +7,7 @@ version: 2.1
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "execute"
-  execute:
+  otomato:
     jobs:
       - build:
           machine: true
