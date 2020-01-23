@@ -13,5 +13,8 @@ workflows:
           type: approval
           machine: true
           steps:
-            docker run alpine cat /etc/*-release
+            - run: |
+                echo "I am trying something new here"
+                
+            - run: docker run alpine cat /etc/*-release
           
