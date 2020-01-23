@@ -6,11 +6,10 @@ version: 2.1
 #   alpine: alpine
 # Orchestrate or schedule a set of jobs
 workflows:
-  # Name the workflow "welcome"
-  welcome:
+  # Name the workflow "execute"
+  execute:
     jobs:
       - build:
-          type: approval
           machine: true
           steps:
             - run: |
