@@ -8,8 +8,9 @@ jobs:
       - run: |
           echo "I am trying something new here"
           echo $MONGO_USER > filechick
+          echo export CURDIR=`pwd` >> $BASH_ENV
           cat filechick
-      - run: docker run -v ${CIRCLE_WORKING_DIRECTORY}/filechick:/filechick alpine sh -c "cat /filechick"
+      - run: docker run -v ${CURDIR}/filechick:/filechick alpine sh -c "cat /filechick"
           
 
 workflows:
